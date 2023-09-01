@@ -103,6 +103,7 @@ int main()
 /*
 to count the number of 1's in the binary form of an integer
 */
+/*
 #include<iostream>
 using namespace std;
 int sol(int n)
@@ -116,7 +117,6 @@ int sol(int n)
         n=n>>1;
     }
     return count;
-
 }
 int main()
 {
@@ -125,4 +125,54 @@ int main()
     int ans=sol(n);
     cout<<ans;
 }
+*/
 
+
+/*
+number of notes of 100,50,20,1 required for amount using switch case
+*/
+/*
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"enter the amount ";
+    cin>>n;
+    int notes[4]={100,50,20,1};
+    
+    for(int i=0;i<sizeof(notes)-1;i++)
+    {
+        switch(notes[i])
+        {
+            case 100:
+            cout<<"Number of 100Rs note: "<<n/100<<endl;
+            n=n%100;
+            break;
+
+
+            case 50:
+            cout<<"Number of 50Rs note: "<<n/50<<endl;
+            n=n%50;
+            break;
+            
+
+            case 20:
+            cout<<"Number of 20Rs note: "<<n/20<<endl;
+            n=n%20;
+            break;
+            
+
+            case 1:
+            cout<<"Number of 1Rs note: "<<n/1<<endl;
+            n=n%1;
+            break;
+        }
+        if(n==0)
+        {
+            break;
+        }
+    }
+    
+}
+*/
