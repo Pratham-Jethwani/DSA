@@ -95,3 +95,73 @@ int main()
 }
 */
 
+
+/*
+alternate swap(1st with second, third with fourth,fifth with sixth)
+*/
+/*
+#include<iostream>
+using namespace std;
+void printarray(int a[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+}
+void swap(int a[],int n)
+{
+    int start=0,end=start+1,temp;
+    while(end<n)
+    {
+        temp=a[start];
+        a[start]=a[end];
+        a[end]=temp;
+        start=end+1;
+        end=start+1;
+    }
+}
+int main()
+{
+    int a[6]={1,2,3,4,5,6};
+    int n=6;
+    swap(a,n);
+    printarray(a,n);
+}
+*/
+
+
+/*
+unique occurence of number
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbE5JVTFiN185YVduVjFUbGFrRE5QaHJiclJKZ3xBQ3Jtc0trc1dFZ1k1azlaQXNqWXJPUlJlX0VGQ01pWDhxby1RNHJ1WFd3U1VXcEpYcm5Mdi1RblVxTDNIbThNYUJSazJqelJnX0pGWEllNHBvWVM3VjlfWTdBZFlRRlo3cV8xOE1iWHVoRWxFaUdtV1ZKdFQyQQ&q=https%3A%2F%2Fbit.ly%2F3y01Zdu&v=oVa8DfUDKTw
+*/
+#include<iostream>
+using namespace std;
+int unique(int arr[],int n)
+{   
+    int ans=0;
+    for(int i=0;i<n;i++)
+    {
+        ans=ans^arr[i];                 //logic------> a^a=0 and 0^a=a(xor)
+        cout<<ans;
+    }
+    return ans;
+}
+int main()
+{
+    int n;
+    cout<<"enter n: ";
+    cin>>n;
+    int arr[n];
+    cout<<"enter the elements:\n";
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    int res=unique(arr,n);
+    cout<<"\n"<<res;
+}
+
+/*
+return true if value of occurence of each value in an array is unique
+*/

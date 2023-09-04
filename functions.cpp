@@ -186,6 +186,7 @@ int main()
 /*
 return the nth term of the fibonacci series using well defined function
 */
+/*
 #include<iostream>
 using namespace std;
 int fibonacci(int num)
@@ -208,3 +209,4 @@ int main()
     int res=fibonacci(n);
     cout<<n<<"th term in fibonacci series is: "<<res;
 }
+*/
